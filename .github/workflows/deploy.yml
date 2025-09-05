@@ -31,6 +31,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_docs # 假设 HTML 输出在根目录
+          publish_dir: ./docs # 假设 HTML 输出在根目录
           publish_branch: gh-pages
           force_orphan: true

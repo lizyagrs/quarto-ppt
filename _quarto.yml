@@ -28,13 +28,6 @@ format:
   
   # 3. PDF 文件（pdf）- 用于下载（依赖 Chromium 渲染，Actions 已预装）
   pdf:
-    output-file: index.pdf   # 输出为 docs/index.pdf（PDF 文件）
-    # PDF 渲染配置（确保格式正常）
-    pdf-engine: pdflatex
-    margin: 1cm
-    include-in-header:
-      text: |
-        <style>
-          /* 可选：调整 PDF 字体/布局 */
-          body { font-family: sans-serif; }
-        </style>
+    toc: true
+    number-sections: true
+    highlight-style: tango
