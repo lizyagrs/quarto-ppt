@@ -3,7 +3,7 @@ project:
 format: 
   revealjs: # 输出为Reveal.js网页幻灯片
     incremental: true
-    theme: serif # 可切换主题，如dark, sky, beige等
+    theme: [styles.scss] # 可切换主题，如dark, sky, beige等
     slide-number: true # 显示幻灯片页码
     logo: images/hubulogo.png
     footer: '[课程链接](https://www.xuetangx.com/course/HUBU08091001842/26284212)'

@@ -1,0 +1,33 @@
+/*-- scss:defaults --*/
+// 在此区域定义SCSS变量（通常用于覆盖Reveal.js的默认变量）
+$backgroundColor: #3e3e3e; // 设置全局背景色
+$mainColor: #fff; // 设置主文字颜色，确保与深色背景对比度
+$body-color: $mainColor !default; // 设置正文文本颜色
+$presentation-heading-color: $mainColor !default; // 显式设置所有标题颜色与主色相同
+$presentation-subheading-color: $mainColor !default; // 显式设置所有子标题颜色与主色相同
+$linkColor: #42affa; // 设置链接颜色
+
+// 可以在此处定义其他Reveal.js默认变量
+
+/*-- scss:rules --*/
+// 在此区域编写自定义CSS规则
+// 确保所有属性声明都以分号结尾:cite[2]
+
+// 全局背景色设置（如果需要加强特异性）
+.reveal-viewport {
+    background-color: $backgroundColor !important;
+}
+
+// 确保文字在深色背景上清晰可读
+.reveal {
+    color: $mainColor;
+}
+
+// 为具有特定类的幻灯片设置背景色
+.custom-slide-bg {
+    background-color: #3e3e3e !important;
+    // 注意：在Reveal.js中，直接设置幻灯片背景色可能不会覆盖整个视口
+    // 考虑使用data-background-color属性可能更有效:cite[3]
+}
+
+// 其他自定义样式...
