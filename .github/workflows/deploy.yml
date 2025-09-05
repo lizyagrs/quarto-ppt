@@ -1,0 +1,31 @@
+name: Quarto Deploy (Web + PPT + PDF)
+
+on:
+  push:
+    branches: [ main ]  # 仅 main 分支触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：拉取代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 步骤2：安装 Quarto（支持多格式渲染）
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: latest
+
+      # 步骤3：渲染所有格式（Web/PPT/PDF）- 核心命令
+      - name: Render all formats (Web + PPT + PDF)
+        run: quarto render  # 自动读取 _quarto.yml，输出三种格式到 docs
+
+      # 步骤4：部署 docs 文件夹到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs  # 包含 index.html（Web）、index.pptx（PPT）、index.pdf（PDF）
+          publish_branch: main

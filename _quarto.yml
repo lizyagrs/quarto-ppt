@@ -1,11 +1,40 @@
 project:
-  type: default
+  type: website
+  output-dir: docs  # 所有格式输出到 docs 文件夹（网页/PPT/PDF 统一存放）
+
+website:
+  title: "网页设计与地图应用课件"
+  navbar:
+    left:
+      - href: index.html       # 网页演示入口（RevealJS）
+        text: Web Demo
+      - href: index.pdf        # PDF 文件入口（可直接下载）
+        text: Download PDF
+      - href: index.pptx       # PPT 文件入口（可直接下载）
+        text: Download PPT
+
 format: 
   revealjs: # 输出为Reveal.js网页幻灯片
     incremental: true
     theme: [styles.scss] # 可切换主题，如dark, sky, beige等
     slide-number: true # 显示幻灯片页码
+    transition: slide
+    output-file: index.html  # 输出为 docs/index.html（网页入口）
     logo: images/hubulogo.png
     footer: '[课程链接](https://www.xuetangx.com/course/HUBU08091001842/26284212)'
-  pptx: default # 同时输出为PowerPoint格式
-  pdf: default # 同时输出为PDF格式
+  # 2. PPT 文件（pptx）- 用于下载
+  pptx:
+    output-file: index.pptx  # 输出为 docs/index.pptx（PPT 文件）
+  
+  # 3. PDF 文件（pdf）- 用于下载（依赖 Chromium 渲染，Actions 已预装）
+  pdf:
+    output-file: index.pdf   # 输出为 docs/index.pdf（PDF 文件）
+    # PDF 渲染配置（确保格式正常）
+    pdf-engine: pdflatex
+    margin: 1cm
+    include-in-header:
+      text: |
+        <style>
+          /* 可选：调整 PDF 字体/布局 */
+          body { font-family: sans-serif; }
+        </style>
