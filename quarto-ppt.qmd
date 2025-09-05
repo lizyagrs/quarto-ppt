@@ -1,0 +1,40 @@
+---
+title: "网页设计与地图应用"
+author:
+  - name: 李中元
+    affiliation: 湖北大学 资源环境学院
+    email: lizy.hbu@qq.com
+---
+
+<!-- 扉页 -->
+## QQ群：1025984049
+
+<!-- 图片居左显示 -->
+![](images/qrcode.jpg){width=300 .absolute bottom=0 left=50}  
+<!-- 再来一张二维码，图片居右显示 -->
+![](images/qrcode.jpg){width=300 .absolute bottom=0 right=50}
+
+
+# In the morning
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Breakfast
+
+- Eat eggs
+- Drink coffee
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+
+## Going to sleep
+
+- Get in bed
+- Count sheep
