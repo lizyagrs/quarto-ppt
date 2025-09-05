@@ -27,7 +27,7 @@ format:
     output-file: index.pptx  # 输出为 docs/index.pptx（PPT 文件）
   
   # 3. PDF 文件（pdf）- 用于下载（依赖 Chromium 渲染，Actions 已预装）
-  pdf:
-    toc: true
-    number-sections: true
-    highlight-style: tango
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   highlight-style: tango
